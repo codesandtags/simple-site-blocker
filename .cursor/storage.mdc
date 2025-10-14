@@ -1,0 +1,34 @@
+# Data Storage & Domain Handling
+
+## Storage Format
+
+- Blocked domains stored as array of objects: `{domain: string, enabled: boolean}`
+- Support migration from legacy string array format
+- Use descriptive storage keys (`blockedDomains`, `blockCount`)
+
+## Domain Handling
+
+- Clean user input by removing protocols and www prefixes
+- Validate domains using URL constructor
+- Handle edge cases gracefully (empty input, invalid URLs)
+- Support both full URLs and domain names as input
+
+## Storage Keys
+
+- `blockedDomains` - Array of domain objects in sync storage
+- `blockCount` - Number of total blocks in local storage
+
+## Migration Support
+
+- Detect old string array format and convert to object format
+- Preserve user data during format changes
+- Handle undefined storage gracefully
+
+## Example Domain Object
+
+```javascript
+{
+  domain: "example.com",
+  enabled: true
+}
+```

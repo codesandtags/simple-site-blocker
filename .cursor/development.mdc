@@ -1,0 +1,38 @@
+# Development & Testing Guidelines
+
+## Testing Requirements
+
+- Test extension in Chrome's developer mode
+- Verify blocking works across different site types
+- Test storage sync across multiple Chrome instances
+- Ensure popup UI works correctly in both light and dark modes
+- Validate domain parsing with various input formats
+
+## Performance Considerations
+
+- Use single declarativeNetRequest rule for all blocked domains
+- Minimize DOM manipulations in popup rendering
+- Cache frequently accessed storage data
+- Use efficient event listeners with proper cleanup
+
+## Security & Privacy
+
+- Follow Chrome extension security best practices
+- Use Content Security Policy (CSP) as defined in manifest
+- Never store sensitive user data
+- Respect user privacy - only block sites they explicitly add
+
+## Code Organization
+
+- Keep functions focused and single-purpose
+- Use descriptive function names that explain intent
+- Group related functionality together
+- Add comments for complex business logic
+- Maintain consistent indentation (2 spaces)
+
+## Browser Compatibility
+
+- Target Chrome 88+ (Manifest V3 support)
+- Use modern JavaScript features without polyfills
+- Test on different screen sizes and resolutions
+- Ensure extension works in incognito mode if needed

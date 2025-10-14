@@ -1,0 +1,31 @@
+# JavaScript Code Style & Standards
+
+## General JavaScript Guidelines
+
+- Use modern ES6+ features (async/await, arrow functions, destructuring)
+- Follow functional programming patterns where appropriate
+- Use meaningful variable names and clear function documentation
+- Prefer `const` over `let`, avoid `var`
+- Use template literals for string interpolation
+- Add JSDoc comments for complex functions
+
+## Chrome Extension APIs
+
+- Use Manifest V3 APIs exclusively
+- Prefer `chrome.storage.sync` for user preferences (cross-device sync)
+- Use `chrome.storage.local` for temporary data (like block counts)
+- Always handle async operations with proper error handling
+- Use `declarativeNetRequest` for blocking (not deprecated webRequest)
+
+## Common Patterns
+
+- Use `chrome.storage.onChanged` for real-time UI updates
+- Implement domain validation with URL constructor
+- Follow Chrome extension lifecycle patterns (onInstalled, etc.)
+
+## Error Handling
+
+- Always wrap async operations in try-catch blocks
+- Provide fallback values for storage operations
+- Log errors to console for debugging
+- Gracefully handle storage quota exceeded scenarios

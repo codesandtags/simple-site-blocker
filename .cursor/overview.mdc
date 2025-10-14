@@ -1,0 +1,20 @@
+# Project Overview
+
+This is a Chrome extension that helps users stay focused by blocking distracting websites. The extension uses Chrome's declarativeNetRequest API for efficient blocking and provides a modern UI with dark/light mode support.
+
+## Architecture & File Structure
+
+- `manifest.json` - Extension configuration (Manifest V3)
+- `background.js` - Service worker handling blocking logic and storage
+- `popup.html/popup.js` - Extension popup UI and domain management
+- `blocked.html` - Page shown when sites are blocked
+- `icons/` - Extension icons (16px, 48px, 128px)
+
+## Key Features
+
+- Block any website by redirecting to a friendly, motivational blocked page
+- Add or remove blocked sites dynamically from the popup
+- Blocks Facebook, TikTok, and Instagram by default on first install
+- Syncs blocked sites list across all Chrome browsers using Chrome Sync
+- Modern UI with automatic light and dark mode support
+- Uses Chrome's declarativeNetRequest API for efficient, performant blocking

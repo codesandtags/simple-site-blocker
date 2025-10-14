@@ -1,0 +1,35 @@
+# Git & Documentation Standards
+
+## Git Workflow
+
+- Use conventional commit messages (feat:, fix:, docs:, etc.)
+- Create feature branches for new functionality
+- Test changes thoroughly before committing
+- Update version number in manifest.json for releases
+
+## Documentation Requirements
+
+- Keep README.md updated with installation and usage instructions
+- Document any new features or breaking changes
+- Include screenshots for UI changes
+- Maintain clear contributing guidelines
+
+## Commit Message Examples
+
+- `feat: Add new popup animation`
+- `fix: Correctly parse domain names`
+- `docs: Update installation instructions`
+- `style: Improve dark mode colors`
+
+## Version Management
+
+- Update version in manifest.json for releases
+- Use semantic versioning (major.minor.patch)
+- Document breaking changes in commit messages
+
+## Pull Request Guidelines
+
+- Write clear descriptions of changes
+- Link related issues (e.g., "Fixes #123")
+- Test changes in Chrome developer mode
+- Ensure compatibility with existing storage format

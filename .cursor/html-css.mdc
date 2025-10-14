@@ -1,0 +1,31 @@
+# HTML & CSS Guidelines
+
+## HTML Standards
+
+- Use semantic HTML5 elements
+- Ensure accessibility with proper ARIA labels and semantic markup
+- Include proper meta tags and viewport settings
+- Use meaningful alt text for images
+
+## CSS Standards
+
+- Implement responsive design with CSS Grid/Flexbox
+- Support both light and dark modes using CSS custom properties
+- Use CSS variables for consistent theming
+- Follow BEM methodology for CSS class naming
+- Keep popup width at 300px for consistency
+
+## UI/UX Principles
+
+- Use modern, clean design with subtle shadows and rounded corners
+- Implement smooth transitions and hover effects
+- Provide clear visual feedback for user actions
+- Use SVG icons for crisp display at all sizes
+- Ensure proper contrast ratios for accessibility
+
+## Theme Support
+
+- Define CSS custom properties for colors
+- Use `@media (prefers-color-scheme: dark)` for automatic theme detection
+- Implement smooth transitions for theme changes
+- Test both light and dark mode appearances

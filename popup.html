@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Simple Site Blocker</title>
+    <style>
+      /* --- Reset & Body --- */
+      body {
+        font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+        background-color: #2b2b2b; /* Dark background */
+        color: #f0f0f0; /* Light text */
+        width: 300px;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* --- Header --- */
+      .header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background-color: #1f1f1f; /* Even darker header */
+        padding: 12px 15px;
+        border-bottom: 1px solid #444; /* Subtle separator */
+      }
+      .header img {
+        width: 16px;
+        height: 16px;
+      }
+      .header h3 {
+        color: #ffffff;
+        margin: 0;
+        font-size: 1.1em;
+      }
+
+      /* --- Main Content Wrapper --- */
+      .content-wrapper {
+        padding: 15px;
+      }
+
+      .subheading {
+        color: #f0f0f0;
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 1em;
+        font-weight: 600;
+      }
+
+      /* --- Blocked List --- */
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 15px 0;
+        max-height: 180px;
+        overflow-y: auto;
+      }
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #3c3c3c;
+        border-radius: 4px;
+        padding: 8px 12px;
+        margin-bottom: 5px;
+        font-size: 0.95em;
+        color: #f0f0f0;
+      }
+      li:last-child {
+        margin-bottom: 0;
+      }
+      li.empty-message {
+        color: #999;
+        font-style: italic;
+        background-color: transparent;
+        justify-content: center;
+      }
+
+      /* --- Input Group --- */
+      .input-group {
+        display: flex;
+      }
+      input[type="text"] {
+        flex-grow: 1;
+        padding: 8px;
+        background-color: #444;
+        border: 1px solid #555;
+        color: #ffffff;
+        border-radius: 4px;
+        margin-right: 8px;
+        font-size: 0.95em;
+      }
+      input[type="text"]:focus {
+        border-color: #3498db;
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+      }
+
+      /* --- Buttons --- */
+      button {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        transition: background-color 0.2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        line-height: 1;
+      }
+      button:hover {
+        background-color: #2980b9;
+      }
+      button:active {
+        background-color: #206da0;
+      }
+      button.remove-btn {
+        background-color: #e74c3c;
+        padding: 7px;
+        font-size: 1em;
+      }
+      button.remove-btn:hover {
+        background-color: #c0392b;
+      }
+      button svg {
+        display: block;
+      }
+
+      /* --- Toggle Switch Styles --- */
+      .toggle-switch {
+        position: relative;
+        display: inline-block;
+        width: 44px;
+        height: 24px;
+        margin-right: 12px;
+      }
+
+      .toggle-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .toggle-slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #555;
+        transition: 0.3s;
+        border-radius: 24px;
+      }
+
+      .toggle-slider:before {
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: 0.3s;
+        border-radius: 50%;
+      }
+
+      .toggle-switch input:checked + .toggle-slider {
+        background-color: #3498db;
+      }
+
+      .toggle-switch input:checked + .toggle-slider:before {
+        transform: translateX(20px);
+      }
+
+      .toggle-switch:hover .toggle-slider {
+        box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+      }
+
+      .toggle-switch input:checked + .toggle-slider:hover {
+        box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.4);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="icons/icon16.png" alt="Icon" />
+      <h3>Simple Site Blocker</h3>
+    </div>
+
+    <div class="content-wrapper">
+      <h4 class="subheading">Blocked Sites</h4>
+      <ul id="list"></ul>
+      <div class="input-group">
+        <input id="domainInput" type="text" placeholder="example.com" />
+        <button id="addBtn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+            />
+          </svg>
+          Add
+        </button>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

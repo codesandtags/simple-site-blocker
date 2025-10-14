@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site Blocked - Stay Focused</title>
+    <style>
+      /* 1. DEFINE COLOR VARIABLES
+        We set the light mode colors by default.
+      */
+      :root {
+        --bg-color: #f0f4f8;
+        --card-bg-color: #ffffff;
+        --text-primary: #1a1a1a;
+        --text-secondary: #4a4a4a;
+        --text-quote: #2c2c2c;
+        --text-cite: #666666;
+        --quote-border: #e0e0e0;
+        --accent-color: #2563eb;
+        --accent-hover: #1d4ed8;
+        --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+        --button-text: #ffffff;
+
+        /* Smooth transition for theme changes */
+        transition: background-color 0.2s ease, color 0.2s ease;
+      }
+
+      /* 2. REDEFINE VARIABLES FOR DARK MODE
+        These values are used if the user's OS is set to dark mode.
+      */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg-color: #0f0f0f;
+          --card-bg-color: #1a1a1a;
+          --text-primary: #ffffff;
+          --text-secondary: #e5e5e5;
+          --text-quote: #f0f0f0;
+          --text-cite: #b3b3b3;
+          --quote-border: #404040;
+          --accent-color: #3b82f6;
+          --accent-hover: #2563eb;
+          --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+          --button-text: #ffffff;
+        }
+      }
+
+      /* 3. APPLY VARIABLES TO STYLES
+        The rest of the CSS is the same, but uses variables.
+      */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+          "Helvetica Neue", Arial, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-secondary);
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        box-sizing: border-box;
+      }
+
+      .container {
+        background-color: var(--card-bg-color);
+        border-radius: 12px;
+        box-shadow: var(--card-shadow);
+        padding: 40px;
+        max-width: 500px;
+        text-align: center;
+        border-top: 6px solid var(--accent-color);
+        transition: background-color 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      h1 {
+        color: var(--text-primary);
+        font-size: 2.25em;
+        margin-top: 0;
+        margin-bottom: 15px;
+      }
+
+      .header {
+        display: flex;
+        margin: 0 auto 10px auto;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+      }
+
+      p {
+        font-size: 1.1em;
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+
+      blockquote {
+        font-size: 1.2em;
+        font-style: italic;
+        color: var(--text-quote);
+        border-left: 4px solid var(--quote-border);
+        padding-left: 20px;
+        margin: 0;
+        text-align: left;
+      }
+
+      blockquote cite {
+        display: block;
+        font-style: normal;
+        font-weight: 500;
+        color: var(--text-cite);
+        margin-top: 10px;
+        font-size: 0.9em;
+        text-align: right;
+      }
+
+      /* Added footer style */
+      .footer {
+        margin-top: 30px;
+        font-size: 0.85em;
+        color: var(--text-cite);
+      }
+
+      /* Statistics button hover effect */
+      #statsBtn:hover {
+        background-color: var(--accent-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      #statsBtn:focus {
+        outline: 2px solid var(--accent-color);
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="header">
+        <img src="./icons/icon128.png" width="48px" height="48px" /> Site
+        Blocked
+      </h1>
+      <p>
+        This website is on your blocklist to help you stay focused on what
+        matters.
+      </p>
+      <blockquote>
+        "The bad news is time flies. The good news is you're the pilot."
+        <cite>— Michael Altshuler</cite>
+      </blockquote>
+      <footer class="footer">Made with ❤️ to help you stay productive!</footer>
+
+      <!-- Statistics Link -->
+      <div style="margin-top: 20px">
+        <button
+          id="statsBtn"
+          style="
+            background-color: var(--accent-color);
+            color: var(--button-text);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+          "
+        >
+          📊 View Blocking Statistics
+        </button>
+      </div>
+    </div>
+
+    <script src="blocked.js"></script>
+  </body>
+</html>
