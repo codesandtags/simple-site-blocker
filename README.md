@@ -25,7 +25,7 @@ A modern Chrome extension to help you stay focused by blocking distracting websi
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/YOUR-USERNAME/simple-site-blocker.git
+   git clone https://github.com/codesandtags/simple-site-blocker.git
    cd simple-site-blocker
    ```
 

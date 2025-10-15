@@ -1,0 +1,192 @@
+.installation {
+  padding: 2rem 0 4rem;
+  min-height: 80vh;
+}
+
+.installation-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.installation-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.installation-description {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.requirements {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.requirements h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.requirements-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.requirements-list li {
+  padding: 0.5rem 0;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.installation-steps {
+  margin-bottom: 3rem;
+}
+
+.step {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  transition: all 0.2s ease;
+}
+
+.step:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.step-number {
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  background: var(--gradient-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.step-description {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.step-code {
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+}
+
+.step-code code {
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  word-break: break-all;
+}
+
+.troubleshooting,
+.next-steps {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.troubleshooting h2,
+.next-steps h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.troubleshooting-content {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.troubleshooting-item h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.troubleshooting-item p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.next-steps-content p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.next-steps-content ul {
+  color: var(--text-secondary);
+  padding-left: 1.5rem;
+}
+
+.next-steps-content li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .installation {
+    padding: 1rem 0 2rem;
+  }
+
+  .installation-title {
+    font-size: 2rem;
+  }
+
+  .installation-description {
+    font-size: 1rem;
+  }
+
+  .step {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .step-number {
+    align-self: center;
+  }
+
+  .requirements,
+  .troubleshooting,
+  .next-steps {
+    padding: 1.5rem;
+  }
+}

@@ -5,7 +5,7 @@ Thank you for considering contributing to Simple Site Blocker! We're excited to 
 ## 🚀 Quick Start
 
 1. **Fork** the repository on GitHub
-2. **Clone** your fork: `git clone https://github.com/YOUR-USERNAME/simple-site-blocker.git`
+2. **Clone** your fork: `git clone https://github.com/codesandtags/simple-site-blocker.git`
 3. **Create** a feature branch: `git checkout -b feature/your-feature-name`
 4. **Make** your changes following our guidelines
 5. **Test** thoroughly in Chrome developer mode
@@ -17,7 +17,7 @@ Thank you for considering contributing to Simple Site Blocker! We're excited to 
 
 ### 🐛 Reporting Bugs
 
-Found a bug? Please [open an issue](https://github.com/YOUR-USERNAME/simple-site-blocker/issues) with:
+Found a bug? Please [open an issue](https://github.com/codesandtags/simple-site-blocker/issues) with:
 
 - **Clear Title**: Brief, descriptive title
 - **Steps to Reproduce**: Detailed steps to reproduce the issue
@@ -29,7 +29,7 @@ Found a bug? Please [open an issue](https://github.com/YOUR-USERNAME/simple-site
 
 ### 💡 Suggesting Enhancements
 
-Have an idea? [Open an issue](https://github.com/YOUR-USERNAME/simple-site-blocker/issues) describing:
+Have an idea? [Open an issue](https://github.com/codesandtags/simple-site-blocker/issues) describing:
 
 - **The Problem**: What problem does this solve?
 - **Proposed Solution**: How should it work?
